@@ -4,7 +4,7 @@ import { Flex, VStack, Heading, Spacer } from "@chakra-ui/react";
 import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa'
 import Header from "./components/Header";
 import Profile from "./components/Profile";
-import Social from "./components/Social";
+import Projects from "./components/Projects";
 
 function App() {
 
@@ -23,8 +23,7 @@ function App() {
           <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} onClick={toggleColorMode} isRound='true'></IconButton>
         </Flex>
         <Header></Header>
-        <Social></Social>
-        <Profile></Profile>
+        <Projects></Projects>
       </VStack>
   );
 }
