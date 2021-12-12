@@ -1,4 +1,3 @@
-
 import {
     Box,
     Stack,
@@ -15,42 +14,50 @@ import {
     keyframes,
   } from '@chakra-ui/react';
   import { FaLinkedin, FaGithub } from 'react-icons/fa';
-//   import Blur from './Blur';
-  import homeImg from '../assets/image1.jpg';
+import homeImg from '../assets/image1.jpg';
+import { useMediaQuery } from '@chakra-ui/react'
 //   import { HashLink } from 'react-router-hash-link';
   
-  const gradient = keyframes`
+const gradient = keyframes`
     0% {background-position:0% ;}
     100% {background-position:100% ;}
   `;
 
-  const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 1s infinite alternate`;
+const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 3s infinite alternate`;
+  
+function Hero() {
+    const [showImage, hideImage] = useMediaQuery([
+      '(min-width: 768px)',
+      '(display-mode: browser)',
+    ])
 
-  export default function Hero() {
+    function determine(){
+      if(showImage){
+        
+      }
+    }
+
     return (
       <Box id="hero">
         <Container
           as={SimpleGrid}
           maxW={'7xl'}
           columns={{ base: 1, md: 2 }}
-          spacing={{ base: 10, lg: 32 }}
-          py={{ base: 10, sm: 20, lg: 32 }}
-        >
+          py={{ base: 10, sm: 20, lg: 32 }}>
           <Stack spacing={{ base: 5, md: 10 }}>
             <Heading
               lineHeight={1}
               fontWeight={600}
-              fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
-            >
+              fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
               <Text mb="2" fontSize="md" fontWeight="bold" letterSpacing="wide">
                 Hello :D
               </Text>
               <Text
-                mb="2"
+                mb="0"
                 w="full"
                 paddingBottom="5px"
                 bgClip="text"
-                bgGradient="linear(to-r,#5299D3,#C0FDFB)"
+                bgGradient="linear(to-r,#A9A9A9,#212121)"
                 fontWeight="bold"
                 bgSize="200% auto"
                 animation={animation}
@@ -91,8 +98,7 @@ import {
               </Link>
               <Link
                 rel="noopener"
-                href={'https://www.linkedin.com/in/konsta-laurila-2489451bb/'}
-              >
+                href={'https://www.linkedin.com/in/konsta-laurila-2489451bb/'}>
                 <IconButton
                   variant="outline"
                   aria-label="Go to LinkedIn Profile"
@@ -105,39 +111,27 @@ import {
           </Stack>
           <Flex
             flex={1}
-            justify={'center'}
+            justify={'left'}
             align={'center'}
             position={'relative'}
-            w={'full'}
-          >
-            <Box
-              position={'relative'}
-              height={'350px'}
-              // rounded={'2xl'}
-              // boxShadow={'2xl'}
-              width={'full'}
-              overflow={'hidden'}
-            >
+            w={'full'}>
+            {showImage ? (              
               <Image
+                boxShadow='dark-lg'
+                rounded='md'
+                borderRadius={'45px'}
                 htmlWidth="410px"
                 htmlHeight="521px"
-                alt={'Hero Image'}
+                alt={'Prof image'}
                 w={'50%'}
                 h={'100%'}
                 fit={'cover'}
-                align={'center'}
                 src={homeImg}
-              />
-            </Box>
+              />) : (<></>)}
           </Flex>
         </Container>
-        {/* <Blur
-          position={'absolute'}
-          top={-10}
-          left={-10}
-          style={{ filter: 'blur(3px)' }}
-          zIndex={-2}
-        /> */}
       </Box>
     );
   }
+
+export default Hero;
