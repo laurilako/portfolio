@@ -16,7 +16,7 @@ import {
   import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import homeImg from '../assets/image1.jpg';
 import { useMediaQuery } from '@chakra-ui/react'
-//   import { HashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
   
 const gradient = keyframes`
     0% {background-position:0% ;}
@@ -25,17 +25,11 @@ const gradient = keyframes`
 
 const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 3s infinite alternate`;
   
-function Hero() {
-    const [showImage, hideImage] = useMediaQuery([
+function Home() {
+    const [showImage] = useMediaQuery([
       '(min-width: 768px)',
       '(display-mode: browser)',
     ])
-
-    function determine(){
-      if(showImage){
-        
-      }
-    }
 
     return (
       <Box id="hero">
@@ -68,11 +62,11 @@ function Hero() {
               </Text>
             </Heading>
             <Stack direction={{ base: 'row', sm: 'row' }} spacing={4}>
-              {/* <HashLink smooth to="/#projects"> */}
+              <HashLink smooth to="/projects">
                 <Button variant="outline" size="md">
-                  My projects
+                  PROJECTS
                 </Button>
-              {/* </HashLink> */}
+              </HashLink>
               <Link
                 target="_blank"
                 rel="noopener"
@@ -82,7 +76,7 @@ function Hero() {
                 _hover={{ textDecoration: 'none' }}
               >
                 <Button variant="solid" size="md">
-                  Resume
+                  RESUME
                 </Button>
               </Link>
             </Stack>
@@ -134,4 +128,4 @@ function Hero() {
     );
   }
 
-export default Hero;
+export default Home;
