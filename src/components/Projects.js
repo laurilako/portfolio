@@ -12,23 +12,42 @@ import {
   } from '@chakra-ui/react';
   import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
   import ascii from '../assets/placehold1.jpg';
+import Header from './Header';
   const gradient = keyframes`
       0% {background-position:0% ;}
       100% {background-position:100% ;}
     `;
   
-  const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 1s infinite alternate`;
+  const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 3s infinite alternate`;
   
   const projectData = [
     {
-      name: 'Image-To-Ascii',
-      url: 'https://nitch193.github.io/Image-to-Ascii/',
-      code: 'https://github.com/nitch193/Image-to-Ascii',
+      name: 'ProjektinNimi',
+      url: 'https://github.com/laurilako',
+      code: 'https://github.com/laurilako',
       about:
-        'Upload any image to convert it into an image of ascii characters, it also support playing your videos in ascii characters.',
+        'liiba laaba',
       photo: ascii,
-      tools: 'JavaScript, HTML, Canvas API',
+      tools: 'JavaScript',
     },
+    {
+      name: 'ProjektinNimi',
+      url: 'https://github.com/laurilako',
+      code: 'https://github.com/laurilako',
+      about:
+        'liiba laaba',
+      photo: ascii,
+      tools: 'JavaScript',
+    },
+    {
+      name: 'ProjektinNimi',
+      url: 'https://github.com/laurilako',
+      code: 'https://github.com/laurilako',
+      about:
+        'liiba laaba',
+      photo: ascii,
+      tools: 'JavaScript',
+    }
   ];
   
   const backgrounds = [
@@ -91,7 +110,6 @@ import {
           />
           <Stack justifyContent={'start'}>
             <Heading
-              // color={useColorModeValue('gray.700', 'white')}
               fontSize={'small'}
               fontFamily={'body'}
               letterSpacing={'wide'}
@@ -103,7 +121,6 @@ import {
               ))}
             </Heading>
             <Heading
-              // color={useColorModeValue('gray.700', 'white')}
               fontSize={'2xl'}
               fontFamily={'body'}
             >
@@ -138,53 +155,56 @@ import {
   
   export default function Projects() {
     return (
-      <Box id="projects">
-        <Flex
-          textAlign={'center'}
-          pt={10}
-          ml="auto"
-          mb={24}
-          mr="auto"
-          justifyContent={'center'}
-          direction={'column'}
-          maxW={'7xl'}
-        >
-          <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
-            <Heading
-              py={5}
-              fontSize={48}
-              mb="2"
-              w="full"
-              bgClip="text"
-              bgGradient="linear(to-r,#5299D3,#C0FDFB)"
-              fontWeight="extrabold"
-              bgSize="200% auto"
-              animation={animation}
-            >
-              Things I've built
-            </Heading>
-            <Heading
-              margin={'auto'}
-              width={'70%'}
-              fontFamily={'Inter'}
-              fontWeight={'medium'}
-              fontSize={24}
-              textAlign="center"
-            >
-              Here are some projects I've worked on recently
-            </Heading>
-          </Box>
-          <SimpleGrid
-            columns={{ base: 1, xl: 3, lg: 2, md: 2 }}
-            spacing={'16'}
-            mt={16}
-            mx={'auto'}
+      <>
+      <Header />
+        <Box id="projects">
+          <Flex
+            textAlign={'center'}
+            pt={10}
+            ml="auto"
+            mb={24}
+            mr="auto"
+            justifyContent={'center'}
+            direction={'column'}
+            maxW={'7xl'}
           >
-            {projectData.map((cardInfo, index) => (
-              <ProjectCard key={index} {...cardInfo} index={index} />
-            ))}
-          </SimpleGrid>
-        </Flex>
-      </Box>
+            <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
+              <Heading
+                py={5}
+                fontSize={48}
+                mb="2"
+                w="full"
+                bgClip="text"
+                bgGradient="linear(to-r,#A9A9A9,#212121)"
+                fontWeight="extrabold"
+                bgSize="200% auto"
+                animation={animation}
+              >
+                PROJEKTEJA
+              </Heading>
+              <Heading
+                margin={'auto'}
+                width={'70%'}
+                fontFamily={'Inter'}
+                fontWeight={'medium'}
+                fontSize={24}
+                textAlign="center"
+              >
+                asd
+              </Heading>
+            </Box>
+            <SimpleGrid
+              columns={{ base: 1, xl: 3, lg: 2, md: 2 }}
+              spacing={'16'}
+              mt={16}
+              mx={'auto'}
+            >
+              {projectData.map((cardInfo, index) => (
+                <ProjectCard key={index} {...cardInfo} index={index} />
+              ))}
+            </SimpleGrid>
+          </Flex>
+        </Box>
+      </>
     );
   }

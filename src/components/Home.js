@@ -17,6 +17,7 @@ import {
 import homeImg from '../assets/image1.jpg';
 import { useMediaQuery } from '@chakra-ui/react'
 import { HashLink } from 'react-router-hash-link';
+import ColorModeSwitcher from '../ColorSwitch';
   
 const gradient = keyframes`
     0% {background-position:0% ;}
@@ -62,7 +63,7 @@ function Home() {
               </Text>
             </Heading>
             {/* <Stack align='center' direction={{ base: 'row', sm: 'row' }} spacing={4}> */}
-            <Flex alignItems={"center"}>
+            <Flex justifyContent={"center"}>
               <HashLink smooth to="/projects">
                 <Button variant="outline" size="md">
                   PROJECTS
@@ -81,7 +82,7 @@ function Home() {
                 </Button>
               </Link>
             </Flex>
-            <ButtonGroup spacing="6">
+            <ButtonGroup justifyContent={"center"} spacing="6">
               <Link href={'https://www.github.com/laurilako/'}>
                 <IconButton
                   variant="outline"
@@ -102,6 +103,7 @@ function Home() {
                   icon={<FaLinkedin />}
                 ></IconButton>
               </Link>
+              <ColorModeSwitcher isRound="true"/>
             </ButtonGroup>
           </Stack>
           <Flex

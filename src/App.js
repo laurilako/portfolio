@@ -13,7 +13,6 @@ function App() {
     <Router>
       <ChakraProvider theme={theme}>
         <ParticleBg />
-        <Header />
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/projects' element={<Projects />} />
