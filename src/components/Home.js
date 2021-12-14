@@ -27,12 +27,12 @@ const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 3s infinite 
   
 function Home() {
     const [showImage] = useMediaQuery([
-      '(min-width: 768px)',
+      '(min-width: 850px)',
       '(display-mode: browser)',
     ])
 
     return (
-      <Box id="hero">
+      <Box id="hero" align='center'>
         <Container
           as={SimpleGrid}
           maxW={'7xl'}
@@ -44,7 +44,6 @@ function Home() {
               fontWeight={600}
               fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
               <Text mb="2" fontSize="md" fontWeight="bold" letterSpacing="wide">
-                Hello :D
               </Text>
               <Text
                 mb="0"
@@ -59,9 +58,11 @@ function Home() {
                 KONSTA LAURILA
               </Text>
               <Text fontSize="md" lineHeight={1.1} letterSpacing="wider">
+                info placeholder :D
               </Text>
             </Heading>
-            <Stack direction={{ base: 'row', sm: 'row' }} spacing={4}>
+            {/* <Stack align='center' direction={{ base: 'row', sm: 'row' }} spacing={4}> */}
+            <Flex alignItems={"center"}>
               <HashLink smooth to="/projects">
                 <Button variant="outline" size="md">
                   PROJECTS
@@ -79,7 +80,7 @@ function Home() {
                   RESUME
                 </Button>
               </Link>
-            </Stack>
+            </Flex>
             <ButtonGroup spacing="6">
               <Link href={'https://www.github.com/laurilako/'}>
                 <IconButton

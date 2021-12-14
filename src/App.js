@@ -1,6 +1,6 @@
 import React from 'react';
 import theme from './theme';
-import Nav from './components/Nav';
+import Header from './components/Header';
 import Home from './components/Home';
 import Projects from './components/Projects';
 import ParticleBg from './components/ParticleBg';
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <ChakraProvider theme={theme}>
         <ParticleBg />
-        <Nav />
+        <Header />
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/projects' element={<Projects />} />

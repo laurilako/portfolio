@@ -2,7 +2,7 @@ import React from "react";
 import Particles from "react-tsparticles";
 import particlesConfigDark from "../config/particle-configDark";
 import particlesConfigLight from "../config/particle-configLight";
-import { useColorModeValue, useColorMode } from '@chakra-ui/react';
+import { useColorModeValue } from '@chakra-ui/react';
 
 function ParticleBg() {
 

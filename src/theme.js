@@ -1,5 +1,13 @@
 import { mode } from '@chakra-ui/theme-tools';
 import { extendTheme } from '@chakra-ui/react';
+import { createBreakpoints } from '@chakra-ui/theme-tools';
+
+const breakpoints = createBreakpoints({
+  sm: '40em',
+  md: '52em',
+  lg: '64em',
+  xl: '80em'
+})
 
 const styles = {
   global: props => ({
@@ -16,11 +24,9 @@ const config = {
 
 const components = {
   Button: {
-    // 1. We can update the base styles
     baseStyle: {
-      fontWeight: 'bold', // Normally, it is "semibold"
+      fontWeight: 'bold',
     },
-    // 2. We can add a new button size or extend existing
     sizes: {
       xl: {
         h: '56px',
@@ -28,7 +34,6 @@ const components = {
         px: '32px',
       },
     },
-    // 3. We can add a new visual variant
     variants: {
       'with-shadow': {
         bg: 'red.400',
@@ -37,12 +42,12 @@ const components = {
       outline: props => ({
         borderColor: props.colorMode === 'dark' ? '#5299D3' : '',
       }),
-      // 4. We can override existing variants
     },
   },
 };
 
 const theme = extendTheme({
+  breakpoints,
   config,
   components,
   styles,
