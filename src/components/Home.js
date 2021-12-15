@@ -63,13 +63,13 @@ function Home() {
               </Text>
             </Heading>
             <Flex justifyContent={"center"}>
-              <HashLink smooth to="/projects">
+              <HashLink smooth to="/portfolio/projects">
                 <Button mx={2} variant="outline" size="md">
                   PROJECTS
                 </Button>
               </HashLink>
 
-              <HashLink smooth to="/resume">
+              <HashLink smooth to="/portfolio/resume">
                 <Button variant="solid" size="md">
                   RESUME (wip)
                 </Button>

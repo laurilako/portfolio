@@ -12,7 +12,7 @@ const Header = () => {
         <Flex>
             <Flex alignItems={"center"} display={['none', 'none', 'flex', 'flex']}>
               <ColorModeSwitcher />
-              <HashLink smooth to="/">
+              <HashLink smooth to="/portfolio/">
                 <Button variant="solid" aria-label="Home" mx={2} my={5} w="100%">
                   HOME
                 </Button>

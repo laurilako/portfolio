@@ -14,9 +14,9 @@ function App() {
       <ChakraProvider theme={theme}>
         <ParticleBg />
         <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/resume' element={<Resume />} />
-          <Route exact path='/projects' element={<Projects />} />
+          <Route exact path='/portfolio/' element={<Home />} />
+          <Route exact path='/portfolio/resume' element={<Resume />} />
+          <Route exact path='/portfolio/projects/' element={<Projects />} />
         </Routes>
       </ChakraProvider>
     </Router>
