@@ -34,7 +34,9 @@ function Home() {
 
     return (
       <Box id="hero" align='center'>
-        <ColorModeSwitcher mt='2' isRound="true" />
+        <Flex justifyContent={"flex-start"} ml='2'>
+          <ColorModeSwitcher mt='2' isRound="true" />
+        </Flex>
         <Flex mt='5' justifyContent={"center"}>
           {showImage ? <></> : <Image
                 boxShadow='dark-lg'
