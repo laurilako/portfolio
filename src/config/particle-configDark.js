@@ -2,7 +2,7 @@
 const particlesConfigDark = {
     particles: {
       number: {
-        value: 45,
+        value: 50,
         density: {
           enable: true,
           value_area: 800
@@ -37,12 +37,12 @@ const particlesConfigDark = {
         }
       },
       size: {
-        value: 3,
+        value: 4,
         random: true,
         anim: {
           enable: false,
           speed: 40,
-          size_min: 0.1,
+          size_min: .1,
           sync: false
         }
       },
@@ -50,17 +50,17 @@ const particlesConfigDark = {
         enable: true,
         distance: 150,
         color: "#ffffff",
-        opacity: 0.4,
+        opacity: 0.5,
         width: 1
       },
       move: {
         enable: true,
-        speed: 1.603412060865523,
+        speed: 5,
         direction: "none",
         random: false,
         straight: false,
         out_mode: "out",
-        bounce: false,
+        bounce: true,
         attract: {
           enable: false,
           rotateX: 600,
@@ -73,7 +73,7 @@ const particlesConfigDark = {
       events: {
         onhover: {
           enable: false,
-          mode: "grab"
+          mode: "repulse"
         },
         onclick: {
           enable: true,
@@ -100,7 +100,7 @@ const particlesConfigDark = {
           duration: 0.4
         },
         push: {
-          particles_nb: 2
+          particles_nb: 1
         },
         remove: {
           particles_nb: 2

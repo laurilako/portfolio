@@ -2,7 +2,7 @@
 const particlesConfigLight = {
     particles: {
       number: {
-        value: 80,
+        value: 50,
         density: {
           enable: true,
           value_area: 800
@@ -37,7 +37,7 @@ const particlesConfigLight = {
         }
       },
       size: {
-        value: 3,
+        value: 4,
         random: true,
         anim: {
           enable: false,
@@ -50,17 +50,17 @@ const particlesConfigLight = {
         enable: true,
         distance: 150,
         color: "#000000",
-        opacity: 0.4,
+        opacity: 0.5,
         width: 1
       },
       move: {
         enable: true,
-        speed: 1.603412060865523,
+        speed: 5,
         direction: "none",
         random: false,
         straight: false,
         out_mode: "out",
-        bounce: false,
+        bounce: true,
         attract: {
           enable: false,
           rotateX: 600,
@@ -100,7 +100,7 @@ const particlesConfigLight = {
           duration: 0.4
         },
         push: {
-          particles_nb: 4
+          particles_nb: 1
         },
         remove: {
           particles_nb: 2

@@ -59,7 +59,7 @@ function Home() {
                 KONSTA LAURILA
               </Text>
               <Text fontSize="md" lineHeight={1.1} letterSpacing="wider">
-                info placeholder :D
+                
               </Text>
             </Heading>
             {/* <Stack align='center' direction={{ base: 'row', sm: 'row' }} spacing={4}> */}
