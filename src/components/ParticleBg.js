@@ -10,7 +10,7 @@ function ParticleBg() {
   };
   
   const particlesLoaded = (container) => {
-    console.log(container);
+    // console.log(container);
   };
   
   const config = useColorModeValue(particlesConfigLight, particlesConfigDark)
