@@ -1,16 +1,12 @@
 import { Flex, Button, IconButton } from '@chakra-ui/react'
-import { useState } from 'react'
-import { FaHome, FaTools } from 'react-icons/fa'
+import { FaHome } from 'react-icons/fa'
 import { HashLink } from 'react-router-hash-link'
 import ColorModeSwitcher from '../ColorSwitch';
 import { useColorModeValue } from '@chakra-ui/react';
 import Headroom from 'react-headroom'
 
 const Header = () => {
-  const [display, changeDisplay] = useState('none')
   const darkmode = useColorModeValue(false, true)
-  console.log(darkmode)
-
   return(
     <Headroom>
       <Flex justifyContent={"center"}>
@@ -19,7 +15,7 @@ const Header = () => {
               <ColorModeSwitcher />
               <HashLink smooth to="/">
                 <Button variant="solid" aria-label="Home" mx={2} my={5} w="100%">
-                  Home
+                  HOME
                 </Button>
               </HashLink>
             </Flex>

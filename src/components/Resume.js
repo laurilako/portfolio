@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    Text,
     Flex,
     Heading
   } from '@chakra-ui/react';
