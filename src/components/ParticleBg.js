@@ -5,18 +5,15 @@ import particlesConfigLight from "../config/particle-configLight";
 import { useColorModeValue } from '@chakra-ui/react';
 
 function ParticleBg() {
-
-    const particlesInit = (main) => {
-        console.log(main);
-
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-        };
-
-        const particlesLoaded = (container) => {
-        console.log(container);
-        };
-
-    const config = useColorModeValue(particlesConfigLight, particlesConfigDark)
+  const particlesInit = (main) => {
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  };
+  
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+  
+  const config = useColorModeValue(particlesConfigLight, particlesConfigDark)
 
   return (
     <Particles

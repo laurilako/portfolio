@@ -2,7 +2,7 @@
 const particlesConfigDark = {
     particles: {
       number: {
-        value: 50,
+        value: 30,
         density: {
           enable: true,
           value_area: 800
@@ -107,7 +107,8 @@ const particlesConfigDark = {
         }
       }
     },
-    retina_detect: true
+    retina_detect: true,
+    fpsLimit: 30,
   };
 
 export default particlesConfigDark
