@@ -59,17 +59,22 @@ function Home() {
                 KONSTA LAURILA
               </Text>
               <Text fontSize="md" lineHeight={1.1} letterSpacing="wider">
-                
+                The website is under construction!
               </Text>
             </Heading>
-            {/* <Stack align='center' direction={{ base: 'row', sm: 'row' }} spacing={4}> */}
             <Flex justifyContent={"center"}>
               <HashLink smooth to="/projects">
-                <Button variant="outline" size="md">
+                <Button mx={2} variant="outline" size="md">
                   PROJECTS
                 </Button>
               </HashLink>
-              <Link
+
+              <HashLink smooth to="/resume">
+                <Button variant="solid" size="md">
+                  RESUME (wip)
+                </Button>
+              </HashLink>
+              {/* <Link
                 target="_blank"
                 rel="noopener"
                 href={
@@ -78,9 +83,9 @@ function Home() {
                 _hover={{ textDecoration: 'none' }}
               >
                 <Button variant="solid" size="md">
-                  RESUME
+                  RESUME (wip)
                 </Button>
-              </Link>
+              </Link> */}
             </Flex>
             <ButtonGroup justifyContent={"center"} spacing="6">
               <Link href={'https://www.github.com/laurilako/'}>

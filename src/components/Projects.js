@@ -69,9 +69,8 @@ import Header from './Header';
         p={10}
         justifyContent={'space-between'}
         position={'relative'}
-        bg={useColorModeValue('white', 'gray.900')}
+        bg={useColorModeValue('white', '#222831')}
         _after={{
-          content: '""',
           position: 'absolute',
           height: '21px',
           width: '29px',
@@ -87,7 +86,7 @@ import Header from './Header';
           height: 'full',
           maxW: '450px',
           width: 'full',
-          filter: 'blur(40px)',
+          filter: 'blur(50px)',
           transform: 'scale(0.98)',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -180,7 +179,7 @@ import Header from './Header';
                 bgSize="200% auto"
                 animation={animation}
               >
-                PROJEKTEJA
+                PROJECTS
               </Heading>
               <Heading
                 margin={'auto'}
@@ -190,7 +189,7 @@ import Header from './Header';
                 fontSize={24}
                 textAlign="center"
               >
-                asd
+                {/* //Infoa tähän? */}
               </Heading>
             </Box>
             <SimpleGrid
