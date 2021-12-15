@@ -25,7 +25,7 @@ const gradient = keyframes`
   `;
 
 const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 3s infinite alternate`;
-  
+
 function Home() {
     const [showImage] = useMediaQuery([
       '(min-width: 850px)',
@@ -34,11 +34,26 @@ function Home() {
 
     return (
       <Box id="hero" align='center'>
+        <ColorModeSwitcher mt='2' isRound="true" />
+        <Flex mt='5' justifyContent={"center"}>
+          {showImage ? <></> : <Image
+                boxShadow='dark-lg'
+                rounded='md'
+                borderRadius={'45px'}
+                htmlWidth="410px"
+                htmlHeight="521px"
+                alt={'Prof image'}
+                w={'50%'}
+                h={'100%'}
+                position={'relative'}
+                src={homeImg}
+              />}
+        </Flex>
         <Container
           as={SimpleGrid}
           maxW={'7xl'}
           columns={{ base: 1, md: 2 }}
-          py={{ base: 10, sm: 20, lg: 32 }}>
+          py={{ base: 10, sm: 10, lg: 10 }}>
           <Stack spacing={{ base: 5, md: 10 }}>
             <Heading
               lineHeight={1}
@@ -81,9 +96,9 @@ function Home() {
                   'linkki'
                 }
                 _hover={{ textDecoration: 'none' }}
-              >
+                >
                 <Button variant="solid" size="md">
-                  RESUME (wip)
+                RESUME (wip)
                 </Button>
               </Link> */}
             </Flex>
@@ -108,7 +123,6 @@ function Home() {
                   icon={<FaLinkedin />}
                 ></IconButton>
               </Link>
-              <ColorModeSwitcher isRound="true"/>
             </ButtonGroup>
           </Stack>
           <Flex

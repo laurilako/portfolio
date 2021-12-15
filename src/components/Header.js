@@ -21,7 +21,7 @@ const Header = () => {
 
             <Flex position="sticky" alignItems={"center"} flexDir={'row'} display={['flex', 'flex', 'none', 'none']}>
               <ColorModeSwitcher mt={2}/>
-              <HashLink smooth to="/">
+              <HashLink smooth to="/portfolio/">
                 <IconButton      
                   mt='2'
                   variant="solid"
