@@ -13,7 +13,7 @@ import {
     IconButton,
     keyframes,
   } from '@chakra-ui/react';
-  import { FaLinkedin, FaGithub } from 'react-icons/fa';
+  import { FaLinkedin, FaGithub, FaAsterisk } from 'react-icons/fa';
 import homeImg from '../assets/image1.jpg';
 import { useMediaQuery } from '@chakra-ui/react'
 import { HashLink } from 'react-router-hash-link';
@@ -26,16 +26,26 @@ const gradient = keyframes`
 
 const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 3s infinite alternate`;
 
-function Home() {
-    const [showImage] = useMediaQuery([
-      '(min-width: 850px)',
-      '(display-mode: browser)',
-    ])
+function Home(props) {
+  const [showImage] = useMediaQuery([
+    '(min-width: 850px)',
+    '(display-mode: browser)',
+  ])
 
     return (
       <Box id="hero" align='center'>
         <Flex justifyContent={"flex-start"} ml='2'>
           <ColorModeSwitcher mt='2' isRound="true" />
+          <IconButton
+            ml='2'
+            mt='2'
+            isRound='true'
+            variant="outline"
+            size="md"
+            fontSize="lg"
+            onClick={props.handleClick}
+            color="current"
+            icon={<FaAsterisk />}></IconButton>
         </Flex>
         <Flex mt='5' justifyContent={"center"}>
           {showImage ? <></> : <Image
@@ -133,7 +143,7 @@ function Home() {
             align={'center'}
             position={'relative'}
             w={'full'}>
-            {showImage ? (              
+            {showImage ? (
               <Image
                 boxShadow='dark-lg'
                 rounded='md'
