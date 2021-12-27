@@ -28,7 +28,7 @@ import Header from './Header';
       url: 'https://github.com/laurilako/itori',
       code: 'https://github.com/laurilako/itori',
       about:
-        'Full-Stack project site, where you can create user and create, edit or remove posts with pictures. More info on github.',
+        'Full-Stack project site, where you can create user and create, edit or remove posts with pictures. More info on github. Yet to be finished and published.',
       photo: projecttori,
       tools: 'MongoDB, ExpressJS, React, NodeJS'
     },
