@@ -12,7 +12,8 @@ import {
   } from '@chakra-ui/react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import projectSite from '../assets/projectSite.jpg';
-import projectfs from '../assets/projectfs.jpg'
+import projectfs from '../assets/projectfs.jpg';
+import projecttori from '../assets/projecttori.jpg';
 import Header from './Header';
   const gradient = keyframes`
       0% {background-position:0% ;}
@@ -23,7 +24,16 @@ import Header from './Header';
   
   const projectData = [
     {
-      name: 'This site (WIP)',
+      name: 'Tori',
+      url: 'https://github.com/laurilako/itori',
+      code: 'https://github.com/laurilako/itori',
+      about:
+        'Full-Stack project site, where you can create user and create, edit or remove posts with pictures. More info on github.',
+      photo: projecttori,
+      tools: 'MongoDB, ExpressJS, React, NodeJS'
+    },
+    {
+      name: 'This site',
       url: 'https://github.com/laurilako',
       code: 'https://github.com/laurilako',
       about:

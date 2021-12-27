@@ -86,7 +86,7 @@ function Home(props) {
                 KONSTA LAURILA
               </Text>
               <Text fontSize="md" lineHeight={1.1} letterSpacing="wider">
-                The website is under construction!
+                {/* The website is under construction! */}
               </Text>
             </Heading>
             <Flex justifyContent={"center"}>
@@ -96,11 +96,11 @@ function Home(props) {
                 </Button>
               </HashLink>
 
-              <HashLink smooth to="/portfolio/resume">
+              {/* <HashLink smooth to="/portfolio/resume">
                 <Button variant="solid" size="md">
                   RESUME (wip)
                 </Button>
-              </HashLink>
+              </HashLink> */}
               {/* <Link
                 target="_blank"
                 rel="noopener"
