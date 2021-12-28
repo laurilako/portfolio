@@ -25,10 +25,10 @@ import Header from './Header';
   const projectData = [
     {
       name: 'Tori',
-      url: 'https://github.com/laurilako/itori',
+      url: 'https://stark-meadow-54802.herokuapp.com/',
       code: 'https://github.com/laurilako/itori',
       about:
-        'Full-Stack project site, where you can create user and create, edit or remove posts with pictures. More info on github. Yet to be finished and published.',
+        'Full-Stack project site, where you can create user and create, edit or remove posts with pictures. More info on github. Application demo is available at heroku, press link below (or check github)!',
       photo: projecttori,
       tools: 'MongoDB, ExpressJS, React, NodeJS'
     },
