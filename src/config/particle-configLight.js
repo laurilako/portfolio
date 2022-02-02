@@ -107,8 +107,8 @@ const particlesConfigLight = {
         }
       }
     },
-    retina_detect: true,
-    fpsLimit: 30,
+    retina_detect: false,
+    fpsLimit: 50,
   };
 
 export default particlesConfigLight

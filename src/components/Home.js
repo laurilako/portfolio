@@ -34,7 +34,7 @@ function Home(props) {
 
     return (
       <Box id="hero" align='center'>
-        <Flex justifyContent={"flex-start"} ml='2'>
+        <Flex justifyContent={"center"}>
           <ColorModeSwitcher mt='2' isRound="true" />
           <IconButton
             ml='2'
