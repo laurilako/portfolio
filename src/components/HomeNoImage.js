@@ -7,15 +7,12 @@ import {
     Button,
     SimpleGrid,
     Link,
-    Image,
     Flex,
     ButtonGroup,
     IconButton,
     keyframes,
   } from '@chakra-ui/react';
   import { FaLinkedin, FaGithub, FaAsterisk } from 'react-icons/fa';
-import homeImg from '../assets/image1.jpg';
-import { useMediaQuery } from '@chakra-ui/react'
 import { HashLink } from 'react-router-hash-link';
 import ColorModeSwitcher from '../ColorSwitch';
   
@@ -27,12 +24,6 @@ const gradient = keyframes`
 const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 3s infinite alternate`;
 
 function Home(props) {
-
-  const [showImage] = useMediaQuery([
-    '(min-width: 850px)',
-    '(display-mode: browser)',
-  ])
-
     return (
       <Box id="hero" align='center'>
         <Flex justifyContent={"center"}>
@@ -48,26 +39,7 @@ function Home(props) {
             color="current"
             icon={<FaAsterisk />}></IconButton>
         </Flex>
-        <Flex mt='5' justifyContent={"center"}>
-          {showImage ? <></> : <Image
-                boxShadow='dark-lg'
-                rounded='md'
-                borderRadius={'45px'}
-                htmlWidth="410px"
-                htmlHeight="521px"
-                alt={'Prof image'}
-                w={'50%'}
-                h={'100%'}
-                position={'relative'}
-                src={homeImg}
-              />}
-        </Flex>
-        <Container
-          as={SimpleGrid}
-          maxW={'7xl'}
-          columns={{ base: 1, md: 2 }}
-          py={{ base: 10, sm: 10, lg: 10 }}>
-          <Stack spacing={{ base: 5, md: 10 }}>
+          <Stack mt='10' spacing={{ base: 5, md: 10 }}>
             <Heading
               lineHeight={1}
               fontWeight={600}
@@ -127,21 +99,9 @@ function Home(props) {
             align={'center'}
             position={'relative'}
             w={'full'}>
-            {showImage ? (
-              <Image
-                boxShadow='dark-lg'
-                rounded='md'
-                borderRadius={'45px'}
-                htmlWidth="410px"
-                htmlHeight="521px"
-                alt={'Prof image'}
-                w={'50%'}
-                h={'100%'}
-                fit={'cover'}
-                src={homeImg}
-              />) : (<></>)}
           </Flex>
-        </Container>
+        <Flex mt='5' justifyContent={"center"}>
+        </Flex>
       </Box>
     );
   }

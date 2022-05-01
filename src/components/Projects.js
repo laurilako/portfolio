@@ -14,6 +14,7 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import projectSite from '../assets/projectSite.jpg';
 import projectfs from '../assets/projectfs.jpg';
 import projecttori from '../assets/projecttori.jpg';
+import projectfb from '../assets/projectfeedback.jpg';
 import Header from './Header';
   const gradient = keyframes`
       0% {background-position:0% ;}
@@ -23,6 +24,15 @@ import Header from './Header';
   const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 3s infinite alternate`;
   
   const projectData = [
+    {
+      name: 'Feedback',
+      url: 'https://feedbackfrontend.azurewebsites.net/',
+      code: 'https://github.com/laurilako/Feedback',
+      about:
+        'REST API created using .NET CORE. Created as an assignment in purpose of learning .NET.',
+      photo: projectfb,
+      tools: 'AzureDB, Azure, React, C#, .NET'
+    },
     {
       name: 'Tori',
       url: 'https://stark-meadow-54802.herokuapp.com/',
