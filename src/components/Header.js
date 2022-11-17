@@ -11,7 +11,7 @@ const Header = () => {
       <Flex justifyContent={"center"}>
         <Flex>
             <Flex alignItems={"center"} display={['none', 'none', 'flex', 'flex']}>
-              <ColorModeSwitcher />
+              {/*<ColorModeSwitcher mt={2}/> */}
               <HashLink smooth to="/portfolio/">
                 <Button variant="solid" aria-label="Home" mx={2} my={5} w="100%">
                   HOME
@@ -20,7 +20,7 @@ const Header = () => {
             </Flex>
 
             <Flex position="sticky" alignItems={"center"} flexDir={'row'} display={['flex', 'flex', 'none', 'none']}>
-              <ColorModeSwitcher mt={2}/>
+              {/*<ColorModeSwitcher mt={2}/> */}
               <HashLink smooth to="/portfolio/">
                 <IconButton      
                   mt='2'
